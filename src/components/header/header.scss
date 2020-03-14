@@ -1,0 +1,29 @@
+@import '../../assets/css/main';
+
+.header {
+  position: fixed;
+  width: calc(100vw - 5rem);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+  background-color: $dark;
+  &__link {
+    margin-left: 10px;
+  }
+  &__logo {
+    width: 15rem;
+    height: 100%;
+  }
+}
+
+.tradingview-widget-container {
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 1rem;
+    width: calc(100vw - 2rem);
+  }
+}

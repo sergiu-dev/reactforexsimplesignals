@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navigation.css'
 
-import { ReactComponent as Logos } from '../../assets/images/logo2.svg';
-import { ReactComponent as Logo } from '../../assets/images/logo.svg';
-import { ReactComponent as LogoArrow } from '../../assets/images/logo_arrow.svg';
+import { ReactComponent as Arrow } from '../../assets/images/arrow.svg';
+import { ReactComponent as Home } from '../../assets/images/home.svg';
 import { ReactComponent as AllSignals } from '../../assets/images/signals.svg';
 import { ReactComponent as About } from '../../assets/images/about.svg';
 import { ReactComponent as Contact } from '../../assets/images/envelope.svg';
@@ -13,12 +12,15 @@ import { ReactComponent as Login } from '../../assets/images/login.svg';
 const Navigation = () => (
 	<nav className='navigation'>
 		<ul className='navigation__menu'>
-			<li className='navigation__item-logo'>
-				<Logo className='navigation__logo' />
+			<li className='navigation__arrow'>
+				<div className='navigation__arrow-container'>
+					<Arrow className='navigation__arrow-icon' />
+				</div>
 			</li>
-			<li className='navigation__item-logo'>
+			<li className='navigation__item'>
 				<Link className='navigation__link' to='/'>
-					<LogoArrow className='navigation__link-icon' />
+					<Home className='navigation__link-icon' />
+					<span className='navigation__link-text'>Home</span>
 				</Link>
 			</li>
 			<li className='navigation__item'>

@@ -1,9 +1,8 @@
 @import '../../assets/css/main';
 
 .navigation {
-  width: 5rem;
-  height: 100vh;
   position: fixed;
+  z-index: 999;
   background-color: $backgroundColor;
   transition: width 200ms ease;
   &__menu {
@@ -14,6 +13,25 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+  }
+  &__arrow {
+    width: 100%;
+    &-container {
+      height: 5rem;
+      background-color: $dark;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      color: $grey;
+    }
+    &-icon {
+      min-width: 2rem;
+      height: 2rem;
+      margin: 0 1.5rem;
+      opacity: 0.7;
+      transform: rotate(0deg);
+      transition: transform 500ms;
+    }
   }
   &__item {
     width: 100%;
@@ -26,19 +44,6 @@
     &:last-child {
       margin-top: auto;
     }
-  }
-  &__item-logo {
-    width: 100%;
-    background-color: $dark;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &__logo {
-    width: 8rem;
-    height: 8rem;
-    margin-left: 1rem;
   }
   &__link {
     display: flex;
@@ -59,12 +64,43 @@
     }
   }
   &:hover {
-    width: 16rem;
-    .navigation__link-text, .navigation__logo {
-      display: block;
-    }
     .navigation__link-icon {
       opacity: 1;
+    }
+    .navigation__arrow-icon {
+      color: $green;
+      transform: rotate(-180deg);
+      margin-left: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    &__menu {
+      flex-direction: row;
+    }
+    &__arrow {
+      display: none;
+    }
+    &__link {
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navigation {
+    width: 5rem;
+    height: 100vh;
+    &:hover {
+      width: 16rem;
+      .navigation__link-text {
+        display: inline;
+      }
     }
   }
 }

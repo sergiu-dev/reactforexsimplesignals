@@ -93,16 +93,12 @@ body {
   margin: 0;
   background-color: $dark;
   color: #fff;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 main {
   margin-left: 5rem;
-  padding: 1rem;
-}
-
-blockquote {
-  margin: 0;
+  padding: 6rem 1rem 1rem;
 }
 
 p {
@@ -125,5 +121,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   &:hover {
 	background: $green;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+	margin-left: 0;
+	margin-bottom: 5rem;
   }
 }

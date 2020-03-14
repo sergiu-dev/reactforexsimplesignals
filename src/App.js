@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './assets/css/App.css';
 
+import Header from './components/header/header';
 import Navigation from './components/navigation/navigation';
 import HomePage from './pages/home_page/home_page';
 import AllSignalsPage from './pages/all_signals_page/all_signals_page';
@@ -11,6 +12,7 @@ import ContactPage from './pages/contact_page/contact_page';
 function App() {
   return (
     <div className='App'>
+      <Header />
       <Navigation/>
       <main>
           <Switch>
