@@ -8,20 +8,22 @@ import HomePage from './pages/home_page/home_page';
 import AllSignalsPage from './pages/all_signals_page/all_signals_page';
 import AboutPage from './pages/about_page/about_page';
 import ContactPage from './pages/contact_page/contact_page';
+import TopButton from './components/top_button';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <Navigation/>
+      <Navigation />
       <main>
-          <Switch>
-            <Route exact path='/' component={HomePage}/>
-            <Route exact path='/all-signals' component={AllSignalsPage}/>
-            <Route exact path='/about' component={AboutPage}/>
-            <Route exact path='/contact' component={ContactPage}/>
-          </Switch>
+        <Switch>
+          <Route exact path='/' component={HomePage}/>
+          <Route exact path='/all-signals' component={AllSignalsPage}/>
+          <Route exact path='/about' component={AboutPage}/>
+          <Route exact path='/contact' component={ContactPage}/>
+        </Switch>
       </main>
+      <TopButton />
     </div>
   );
 }

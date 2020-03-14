@@ -7,6 +7,14 @@
   box-shadow: 11px 0px 13px -8px rgba(0, 0, 0, 0.75);
   transition: width 200ms ease;
 }
+.navigation:hover .navigation__link-icon {
+  opacity: 1;
+}
+.navigation:hover .navigation__arrow-icon {
+  color: #1abb9c;
+  transform: rotate(-180deg);
+  margin-left: auto;
+}
 .navigation__menu {
   padding: 0;
   margin: 0;
@@ -52,7 +60,6 @@
   align-items: center;
   height: 5rem;
   color: #84858E;
-  text-decoration: none;
 }
 .navigation__link-icon {
   min-width: 2rem;
@@ -64,14 +71,6 @@
 .navigation__link-text {
   display: none;
   margin-left: 1rem;
-}
-.navigation:hover .navigation__link-icon {
-  opacity: 1;
-}
-.navigation:hover .navigation__arrow-icon {
-  color: #1abb9c;
-  transform: rotate(-180deg);
-  margin-left: auto;
 }
 
 @media only screen and (max-width: 600px) {

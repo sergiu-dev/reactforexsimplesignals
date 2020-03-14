@@ -8,6 +8,16 @@
   -moz-box-shadow: 11px 0px 13px -8px rgba(0,0,0,0.75);
   box-shadow: 11px 0px 13px -8px rgba(0,0,0,0.75);
   transition: width 200ms ease;
+  &:hover {
+    .navigation__link-icon {
+      opacity: 1;
+    }
+    .navigation__arrow-icon {
+      color: $green;
+      transform: rotate(-180deg);
+      margin-left: auto;
+    }
+  }
   &__menu {
     padding: 0;
     margin: 0;
@@ -53,7 +63,6 @@
     align-items: center;
     height: 5rem;
     color: $grey;
-    text-decoration: none;
     &-icon {
       min-width: 2rem;
       max-height: 2rem;
@@ -64,16 +73,6 @@
     &-text {
       display: none;
       margin-left: 1rem;
-    }
-  }
-  &:hover {
-    .navigation__link-icon {
-      opacity: 1;
-    }
-    .navigation__arrow-icon {
-      color: $green;
-      transform: rotate(-180deg);
-      margin-left: auto;
     }
   }
 }
