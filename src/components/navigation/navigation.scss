@@ -5,6 +5,7 @@
   height: 100vh;
   position: fixed;
   background-color: $backgroundColor;
+  transition: width 200ms ease;
   &__menu {
     padding: 0;
     margin: 0;
@@ -16,28 +17,54 @@
   }
   &__item {
     width: 100%;
+    &:hover {
+      background-color: $dark;
+      .navigation__link-icon {
+        color: $green;
+      }
+    }
     &:last-child {
       margin-top: auto;
     }
   }
-  .logo {
-    width: 300px;
-    height: 100px;
+  &__item-logo {
+    width: 100%;
+    background-color: $dark;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 1rem;
   }
   &__link {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: #fff;
+    color: $grey;
     text-decoration: none;
     &-icon {
       min-width: 2rem;
       max-height: 2rem;
       margin: 0 1.5rem;
+      opacity: 0.7;
+      transition: all 500ms;
     }
     &-text {
       display: none;
       margin-left: 1rem;
+    }
+  }
+  &:hover {
+    width: 16rem;
+    .navigation__link-text, .navigation__logo {
+      display: block;
+    }
+    .navigation__link-icon {
+      opacity: 1;
     }
   }
 }
