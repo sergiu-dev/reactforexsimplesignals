@@ -52,7 +52,7 @@
       }
     }
     &:last-child {
-      margin-top: auto;
+      margin: auto 0 5rem;
     }
   }
   &__link {
@@ -84,6 +84,9 @@
     box-shadow: 0 -2px 12px -1px rgba(0,0,0,0.75);
     &__menu {
       flex-direction: row;
+    }
+    &__item:last-child {
+      margin: 0;
     }
     &__arrow {
       display: none;

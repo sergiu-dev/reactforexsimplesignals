@@ -50,7 +50,7 @@
   color: #1abb9c;
 }
 .navigation__item:last-child {
-  margin-top: auto;
+  margin: auto 0 5rem;
 }
 .navigation__link {
   display: flex;
@@ -81,6 +81,9 @@
   }
   .navigation__menu {
     flex-direction: row;
+  }
+  .navigation__item:last-child {
+    margin: 0;
   }
   .navigation__arrow {
     display: none;
