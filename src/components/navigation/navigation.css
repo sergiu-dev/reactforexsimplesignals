@@ -2,9 +2,6 @@
   position: fixed;
   z-index: 999;
   background-color: #1F1F2F;
-  -webkit-box-shadow: 11px 0px 13px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 11px 0px 13px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 11px 0px 13px -8px rgba(0, 0, 0, 0.75);
   transition: width 200ms ease;
 }
 .navigation:hover .navigation__link-icon {
@@ -78,6 +75,9 @@
     bottom: 0;
     width: 100vw;
     height: 5rem;
+    -webkit-box-shadow: 0 -2px 12px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 -2px 12px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 -2px 12px -1px rgba(0, 0, 0, 0.75);
   }
   .navigation__menu {
     flex-direction: row;
@@ -94,6 +94,9 @@
     width: 5rem;
     margin-top: 5rem;
     height: calc(100vh - 5rem);
+    -webkit-box-shadow: 11px 0 13px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 0 13px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 0 13px -8px rgba(0, 0, 0, 0.75);
   }
   .navigation:hover {
     width: 16rem;

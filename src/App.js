@@ -8,6 +8,7 @@ import HomePage from './pages/home_page/home_page';
 import AllSignalsPage from './pages/all_signals_page/all_signals_page';
 import AboutPage from './pages/about_page/about_page';
 import ContactPage from './pages/contact_page/contact_page';
+import Footer from './components/footer/footer';
 import TopButton from './components/reusable/top_button';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/contact' component={ContactPage}/>
         </Switch>
       </main>
+      <Footer />
       <TopButton />
     </div>
   );

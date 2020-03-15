@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 class TopButton extends React.Component {
 	constructor(props) {
@@ -19,7 +19,6 @@ class TopButton extends React.Component {
 	scrollFunc = () => {
 		// Get the current scroll value
 		let y = window.scrollY;
-		console.log(y);
 		// If the scroll value is greater than the window height, will add the show class to the scroll-to-top button
 		if (y > 300) {
 			this.setState({hasScrolled : true});

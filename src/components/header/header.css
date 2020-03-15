@@ -7,16 +7,16 @@
   align-items: center;
   background-color: #1F1F2F;
 }
-.header__link {
-  margin-left: 10px;
-}
 .header__logo {
   width: 15rem;
   height: 100%;
+  padding: 10px;
 }
 
-.tradingview-widget-container {
-  padding: 0 10px;
+@media only screen and (max-width: 500px) {
+  .tradingview-widget-container {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

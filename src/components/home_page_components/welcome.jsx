@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './home_header.css'
+import './welcome.css'
 
-const HomeHeader = () => (
+const Welcome = () => (
 	<div className='home-header'>
 		<div className='home-header__container fade-in-left'>
 			<h1 className='home-header__title'>Free Forex Signals</h1>
@@ -15,4 +15,4 @@ const HomeHeader = () => (
 	</div>
 );
 
-export default HomeHeader;
+export default Welcome;
