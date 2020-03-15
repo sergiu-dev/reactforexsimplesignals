@@ -79,6 +79,10 @@
     flex-direction: column;
   }
 
+  .footer__item:last-child {
+    max-width: 400px;
+  }
+
   .footer__item-social-icons {
     margin-top: 2rem;
   }
