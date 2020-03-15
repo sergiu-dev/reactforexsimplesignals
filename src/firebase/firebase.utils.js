@@ -3,14 +3,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-	apiKey: "AIzaSyCLzxjLdXLUUDjF-RqBpBI0S43SwqKNTWU",
-	authDomain: "forexsimplesignals-8e376.firebaseapp.com",
-	databaseURL: "https://forexsimplesignals-8e376.firebaseio.com",
-	projectId: "forexsimplesignals-8e376",
-	storageBucket: "forexsimplesignals-8e376.appspot.com",
-	messagingSenderId: "118612069701",
-	appId: "1:118612069701:web:0fd79b0871bb4eb482422c",
-	measurementId: "G-E0C86D1T19"
+	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+	databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.REACT_APP_FIREBASE_APP_ID,
+	measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(config);
