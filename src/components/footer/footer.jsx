@@ -13,7 +13,7 @@ const Footer = () => (
 				<h3 className='section-title'>A piece of advice</h3>
 				<p className='footer__item-text'>
           <span>
-              Life is really simple, but we insist on making it complicated.<br/>
+              "Life is really simple, but we insist on making it complicated."<br/>
           </span>
 					- Confucius
 				</p>
@@ -53,9 +53,8 @@ const Footer = () => (
 					We promise that we won't spam you.
 				</p>
 				<form className='footer__item-form' action='' method='POST'>
-					<input className='footer__item-form-input' type='email' name='email' placeholder='Email address'
-					       aria-label='subscribe'/>
-						<button className='button' type='submit'>Subscribe</button>
+					<input className='footer__item-form-input' type='email' name='email' placeholder='Email address' />
+					<button className='button' type='submit'>Subscribe</button>
 				</form>
 			</div>
 		</div>
