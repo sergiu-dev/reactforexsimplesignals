@@ -1,0 +1,38 @@
+.form__group {
+  position: relative;
+  margin: 3rem 0;
+}
+.form__group-input {
+  background-color: #191927;
+  color: #84858E;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #84858E;
+  margin: 1.5rem 0;
+}
+.form__group-input:focus ~ .form__group-label {
+  top: -1rem;
+  font-size: 14px;
+  color: #fff;
+}
+.form__group input[type=password] {
+  letter-spacing: 0.3em;
+}
+.form__group-label {
+  color: #84858E;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+}
+.form__group-label.shrink {
+  top: -1rem;
+  font-size: 14px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=form-input.css.map */

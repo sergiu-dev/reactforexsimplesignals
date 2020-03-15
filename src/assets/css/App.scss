@@ -90,8 +90,13 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+*:focus {
+  outline:none !important;
 }
 
 body {
@@ -135,11 +140,6 @@ a.button  {
   &:hover {
 	color: #fff;
   }
-}
-
-
-*:focus {
-  outline:none !important;
 }
 
 // * Scrollbar for Chrome

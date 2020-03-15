@@ -1,10 +1,24 @@
 import React from 'react';
 import './contact_page.css'
 
-const ContactPage = () => (
-	<div className='contact-page'>
-		Hello contact page!
-	</div>
-);
+class ContactPage extends React.Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			email: '',
+			password: ''
+		}
+	}
+
+	render() {
+		return (
+			<div className='contact-page'>
+
+			</div>
+		)
+	}
+}
 
 export default ContactPage;

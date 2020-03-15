@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TradesWidget from '../reusable/trades_widget';
+import TradesWidget from '../trades_widget';
 import './header.css';
 
 import logo from '../../assets/images/logo.png';

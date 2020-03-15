@@ -42,7 +42,7 @@ const Navigation = () => (
 				</Link>
 			</li>
 			<li className='navigation__item'>
-				<Link className='navigation__link' to='/authentication'>
+				<Link className='navigation__link' to='/login'>
 					<Login className='navigation__link-icon' />
 					<span className='navigation__link-text'>Sign in</span>
 				</Link>
