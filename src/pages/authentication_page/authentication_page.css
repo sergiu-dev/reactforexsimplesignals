@@ -3,6 +3,11 @@
   justify-content: space-around;
   text-align: center;
 }
+.authentication-page .sign-in__title-span, .authentication-page .sign-up__title-span {
+  color: #1abb9c;
+  font-size: 13px;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 900px) {
   .authentication-page {

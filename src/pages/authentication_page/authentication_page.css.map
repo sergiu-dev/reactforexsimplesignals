@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["authentication_page.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;IACD;IACA","file":"authentication_page.css"}
+{"version":3,"sourceRoot":"","sources":["authentication_page.scss","../../assets/css/_main.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;AACA;EACD,OCDO;EDEP;EACA;;;AAID;EACE;IACD;IACA","file":"authentication_page.css"}

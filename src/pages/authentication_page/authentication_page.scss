@@ -1,7 +1,14 @@
+@import '../../assets/css/main';
+
 .authentication-page {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  .sign-in__title-span, .sign-up__title-span {
+	color: $green;
+	font-size: 13px;
+	font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 900px) {
