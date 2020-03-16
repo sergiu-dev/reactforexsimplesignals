@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './assets/css/App.css';
 
 import Header from './components/header/header';
@@ -13,33 +14,24 @@ import Footer from './components/footer/footer';
 import TopButton from './components/top_button';
 
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+import {setCurrentUser} from './redux/user/ user.actions';
 
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentUser: null
-    }
-  }
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = createUserProfileDocument(userAuth);
         (await userRef).onSnapshot(snapshot => {
-          this.setState({
-            currentUser: {
-              id: snapshot.id,
-              ...snapshot.data()
-            }
+          setCurrentUser({
+            id: snapshot.id,
+            ...snapshot.data()
           });
         })
       } else {
-        this.setState({currentUser: userAuth});
+        setCurrentUser(userAuth);
       }
     });
   }
@@ -52,14 +44,21 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Header />
-        <Navigation currentUser={this.state.currentUser} />
+        <Navigation />
         <main>
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/all-signals' component={AllSignalsPage}/>
             <Route exact path='/about' component={AboutPage}/>
             <Route exact path='/contact' component={ContactPage}/>
-            <Route exact path='/sign-in' component={AuthentictionPage}/>
+            <Route exact path='/sign-in'
+               render={() => this.props.currentUser ? (
+                 <Redirect to='/'/>
+                 ) : (
+                 <AuthentictionPage />
+                 )
+               }
+            />
           </Switch>
         </main>
         <Footer />
@@ -69,4 +68,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
