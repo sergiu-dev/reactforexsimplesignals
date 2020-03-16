@@ -1,12 +1,12 @@
 .authentication-page {
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 
 @media only screen and (max-width: 900px) {
   .authentication-page {
 	flex-direction: column;
 	align-items: center;
-	text-align: center;
   }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
 import './assets/css/App.css';
 
 import Header from './components/header/header';
@@ -14,24 +13,33 @@ import Footer from './components/footer/footer';
 import TopButton from './components/top_button';
 
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
-import {setCurrentUser} from './redux/user/ user.actions';
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null
+    }
+  }
+
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapshot => {
-          setCurrentUser({
-            id: snapshot.id,
-            ...snapshot.data()
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
           });
         })
       } else {
-        setCurrentUser(userAuth);
+        this.setState({currentUser: userAuth});
       }
     });
   }
@@ -44,7 +52,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Header />
-        <Navigation />
+        <Navigation currentUser={this.state.currentUser} />
         <main>
           <Switch>
             <Route exact path='/' component={HomePage}/>
@@ -52,7 +60,7 @@ class App extends React.Component {
             <Route exact path='/about' component={AboutPage}/>
             <Route exact path='/contact' component={ContactPage}/>
             <Route exact path='/sign-in'
-               render={() => this.props.currentUser ? (
+               render={() => this.state.currentUser ? (
                   <Redirect to='/'/>
                  ) : (
                   <AuthentictionPage />
@@ -68,12 +76,4 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
-});
-
-const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

@@ -13,12 +13,12 @@ class SignUp extends React.Component {
 			displayName : '',
 			email: '',
 			password: '',
-			confirmPassword: ''
+			confirmPassword: '',
+			error: ''
 		}
 	}
 
 	handleSubmit = async event => {
-		console.log('ceva');
 		event.preventDefault();
 		const { displayName, email, password, confirmPassword } = this.state;
 
@@ -33,10 +33,11 @@ class SignUp extends React.Component {
 				displayName : '',
 				email: '',
 				password: '',
-				confirmPassword: ''
+				confirmPassword: '',
+				error: ''
 			});
 		} catch (error) {
-			console.log(error);
+			this.setState({ error })
 		}
 	};
 
@@ -46,11 +47,13 @@ class SignUp extends React.Component {
 	};
 
 	render() {
-		const { displayName, email, password, confirmPassword } = this.state;
+		const { displayName, email, password, confirmPassword, error } = this.state;
+
 		return (
 			<div className='sign-up'>
 				<h2 className='sign-up__title'>I do no have an account</h2>
 				<span>Sing up with your email and password</span>
+				{error && <p>{error.message}</p>}
 				<form
 					className='sign-up__form'
 					onSubmit={this.handleSubmit}
