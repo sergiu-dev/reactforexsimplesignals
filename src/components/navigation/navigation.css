@@ -52,6 +52,13 @@
 .navigation__item:last-child {
   margin: auto 0 5rem;
 }
+.navigation__item:last-child .navigation__link-signout {
+  cursor: pointer;
+  user-select: none;
+}
+.navigation__item:last-child .navigation__link-signout:hover .navigation__link-text {
+  color: #1abb9c;
+}
 .navigation__link {
   display: flex;
   align-items: center;
@@ -68,6 +75,7 @@
 .navigation__link-text {
   display: none;
   margin-left: 1rem;
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 600px) {

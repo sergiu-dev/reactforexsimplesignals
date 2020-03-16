@@ -1,0 +1,15 @@
+.sign-in {
+  width: 380px;
+}
+.sign-in__buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 900px) {
+  .sign-in {
+    margin-bottom: 5rem;
+  }
+}
+
+/*# sourceMappingURL=sign_in.css.map */

@@ -1,3 +1,14 @@
+.authentication-page {
+  display: flex;
+  justify-content: space-around;
+}
 
+@media only screen and (max-width: 900px) {
+  .authentication-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=authentication_page.css.map */

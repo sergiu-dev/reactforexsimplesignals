@@ -1,0 +1,13 @@
+.sign-in {
+  width: 380px;
+  &__buttons {
+	display: flex;
+	justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sign-in {
+	margin-bottom: 5rem;
+  }
+}

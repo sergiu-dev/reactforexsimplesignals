@@ -12,7 +12,7 @@ import AuthentictionPage from './pages/authentication_page/authentication_page';
 import Footer from './components/footer/footer';
 import TopButton from './components/top_button';
 
-import { auth } from './firebase/firebase.utils';
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 
 class App extends React.Component {
 
@@ -27,8 +27,21 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = createUserProfileDocument(userAuth);
+        (await userRef).onSnapshot(snapshot => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          });
+          console.log(this.state);
+        })
+      } else {
+        this.setState({currentUser: userAuth});
+      }
     });
   }
 
@@ -40,14 +53,14 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Header />
-        <Navigation />
+        <Navigation currentUser={this.state.currentUser} />
         <main>
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/all-signals' component={AllSignalsPage}/>
             <Route exact path='/about' component={AboutPage}/>
             <Route exact path='/contact' component={ContactPage}/>
-            <Route exact path='/login' component={AuthentictionPage}/>
+            <Route exact path='/sign-in' component={AuthentictionPage}/>
           </Switch>
         </main>
         <Footer />
