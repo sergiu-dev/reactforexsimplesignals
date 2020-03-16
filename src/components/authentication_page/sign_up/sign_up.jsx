@@ -18,6 +18,7 @@ class SignUp extends React.Component {
 	}
 
 	handleSubmit = async event => {
+		console.log('ceva');
 		event.preventDefault();
 		const { displayName, email, password, confirmPassword } = this.state;
 
@@ -41,7 +42,6 @@ class SignUp extends React.Component {
 
 	handleChange = event => {
 		const { name, value } = event.target;
-
 		this.setState({[name]: value});
 	};
 

@@ -23,8 +23,8 @@ class App extends React.Component {
     const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
-        const userRef = createUserProfileDocument(userAuth);
-        (await userRef).onSnapshot(snapshot => {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot(snapshot => {
           setCurrentUser({
             id: snapshot.id,
             ...snapshot.data()
@@ -53,9 +53,9 @@ class App extends React.Component {
             <Route exact path='/contact' component={ContactPage}/>
             <Route exact path='/sign-in'
                render={() => this.props.currentUser ? (
-                 <Redirect to='/'/>
+                  <Redirect to='/'/>
                  ) : (
-                 <AuthentictionPage />
+                  <AuthentictionPage />
                  )
                }
             />
