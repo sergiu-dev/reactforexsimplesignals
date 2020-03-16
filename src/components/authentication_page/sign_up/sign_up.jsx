@@ -53,11 +53,11 @@ class SignUp extends React.Component {
 			<div className='sign-up'>
 				<h2 className='sign-up__title'>I do no have an account</h2>
 				<span>Sing up with your email and password</span>
-				{error && <p>{error.message}</p>}
 				<form
 					className='sign-up__form'
 					onSubmit={this.handleSubmit}
 				>
+					{error && <p className='error'>{error.message}</p>}
 					<FormInput
 						type='text'
 						name='displayName'
