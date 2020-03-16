@@ -25,7 +25,7 @@ const Footer = () => (
 			<div className='footer__item footer__item-contact'>
 				<h3 className='section-title'>Get in touch</h3>
 				<div className='footer__item-link'>
-					<a href='mailto:contact@forex.com?Subject=Hello' target='_top' title='Send us an email'>
+					<a href='mailto:contact@forexsimplesignals.com?Subject=Hello' target='_top' title='Send us an email'>
 						<FontAwesomeIcon icon={faEnvelope} />
 						<span>contact@forexsimplesignals.com</span>
 					</a>
