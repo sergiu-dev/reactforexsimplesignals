@@ -52,7 +52,6 @@ class SignUp extends React.Component {
 				<h2 className='sign-up__title'>I do no have an account</h2>
 				<span>Sing up with your email and password</span>
 				<form
-					noValidate
 					className='sign-up__form'
 					onSubmit={this.handleSubmit}
 				>

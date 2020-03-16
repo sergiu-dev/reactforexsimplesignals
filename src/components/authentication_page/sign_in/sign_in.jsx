@@ -39,7 +39,6 @@ class SignIn extends React.Component {
 				<h2 className='sign-in__title'>I already have an account</h2>
 				<span>Sign in with your email and passowrd</span>
 				<form
-					noValidate
 					className='sign-in__form'
 					onSubmit={this.handleSubmit}
 				>
