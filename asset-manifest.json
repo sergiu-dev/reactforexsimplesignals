@@ -1,30 +1,32 @@
 {
   "files": {
-    "main.css": "/reactforexsimplesignals/static/css/main.f135be5c.chunk.css",
-    "main.js": "/reactforexsimplesignals/static/js/main.22b708d4.chunk.js",
-    "main.js.map": "/reactforexsimplesignals/static/js/main.22b708d4.chunk.js.map",
+    "main.css": "/reactforexsimplesignals/static/css/main.80837811.chunk.css",
+    "main.js": "/reactforexsimplesignals/static/js/main.d50a9805.chunk.js",
+    "main.js.map": "/reactforexsimplesignals/static/js/main.d50a9805.chunk.js.map",
     "runtime-main.js": "/reactforexsimplesignals/static/js/runtime-main.edcec3b5.js",
     "runtime-main.js.map": "/reactforexsimplesignals/static/js/runtime-main.edcec3b5.js.map",
-    "static/js/2.af08d881.chunk.js": "/reactforexsimplesignals/static/js/2.af08d881.chunk.js",
-    "static/js/2.af08d881.chunk.js.map": "/reactforexsimplesignals/static/js/2.af08d881.chunk.js.map",
+    "static/js/2.413fc6cb.chunk.js": "/reactforexsimplesignals/static/js/2.413fc6cb.chunk.js",
+    "static/js/2.413fc6cb.chunk.js.map": "/reactforexsimplesignals/static/js/2.413fc6cb.chunk.js.map",
     "index.html": "/reactforexsimplesignals/index.html",
-    "precache-manifest.9d3f21b51cda081f140cdd275e658e4d.js": "/reactforexsimplesignals/precache-manifest.9d3f21b51cda081f140cdd275e658e4d.js",
+    "precache-manifest.4113e56daeadc072aea766a1267696ca.js": "/reactforexsimplesignals/precache-manifest.4113e56daeadc072aea766a1267696ca.js",
     "service-worker.js": "/reactforexsimplesignals/service-worker.js",
-    "static/css/main.f135be5c.chunk.css.map": "/reactforexsimplesignals/static/css/main.f135be5c.chunk.css.map",
-    "static/js/2.af08d881.chunk.js.LICENSE.txt": "/reactforexsimplesignals/static/js/2.af08d881.chunk.js.LICENSE.txt",
+    "static/css/main.80837811.chunk.css.map": "/reactforexsimplesignals/static/css/main.80837811.chunk.css.map",
+    "static/js/2.413fc6cb.chunk.js.LICENSE.txt": "/reactforexsimplesignals/static/js/2.413fc6cb.chunk.js.LICENSE.txt",
     "static/media/App.css": "/reactforexsimplesignals/static/media/SourceSansPro-Regular.c1678b46.ttf",
     "static/media/about.5b6d96cf.svg": "/reactforexsimplesignals/static/media/about.5b6d96cf.svg",
     "static/media/arrow.14dc4eba.svg": "/reactforexsimplesignals/static/media/arrow.14dc4eba.svg",
     "static/media/envelope.1a9020c3.svg": "/reactforexsimplesignals/static/media/envelope.1a9020c3.svg",
+    "static/media/google.45dff0ba.svg": "/reactforexsimplesignals/static/media/google.45dff0ba.svg",
     "static/media/welcome.css": "/reactforexsimplesignals/static/media/header.bafc506f.jpg",
     "static/media/home.fa2c07da.svg": "/reactforexsimplesignals/static/media/home.fa2c07da.svg",
     "static/media/login.f004e825.svg": "/reactforexsimplesignals/static/media/login.f004e825.svg",
+    "static/media/logout.b231083f.svg": "/reactforexsimplesignals/static/media/logout.b231083f.svg",
     "static/media/signals.ff7b2478.svg": "/reactforexsimplesignals/static/media/signals.ff7b2478.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.edcec3b5.js",
-    "static/js/2.af08d881.chunk.js",
-    "static/css/main.f135be5c.chunk.css",
-    "static/js/main.22b708d4.chunk.js"
+    "static/js/2.413fc6cb.chunk.js",
+    "static/css/main.80837811.chunk.css",
+    "static/js/main.d50a9805.chunk.js"
   ]
 }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fdbdf983eafa2d5ca15f3e00789a9804",
+    "revision": "6b0b700336882854a1162d5614a00a5e",
     "url": "/reactforexsimplesignals/index.html"
   },
   {
-    "revision": "54be10a4db8db900a30f",
-    "url": "/reactforexsimplesignals/static/css/main.f135be5c.chunk.css"
+    "revision": "b56c6f0f4097877a1adb",
+    "url": "/reactforexsimplesignals/static/css/main.80837811.chunk.css"
   },
   {
-    "revision": "9ecd6e0729065bea36da",
-    "url": "/reactforexsimplesignals/static/js/2.af08d881.chunk.js"
+    "revision": "cec34dc3aa4bacfe5200",
+    "url": "/reactforexsimplesignals/static/js/2.413fc6cb.chunk.js"
   },
   {
-    "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/reactforexsimplesignals/static/js/2.af08d881.chunk.js.LICENSE.txt"
+    "revision": "9cc59aa88bbb965336535eb6b360773d",
+    "url": "/reactforexsimplesignals/static/js/2.413fc6cb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "54be10a4db8db900a30f",
-    "url": "/reactforexsimplesignals/static/js/main.22b708d4.chunk.js"
+    "revision": "b56c6f0f4097877a1adb",
+    "url": "/reactforexsimplesignals/static/js/main.d50a9805.chunk.js"
   },
   {
     "revision": "e159e74db62a6fa10f4a",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactforexsimplesignals/static/media/envelope.1a9020c3.svg"
   },
   {
+    "revision": "45dff0bab1cfddd025515bb1c940497d",
+    "url": "/reactforexsimplesignals/static/media/google.45dff0ba.svg"
+  },
+  {
     "revision": "bafc506f372077c3f8536db285764d99",
     "url": "/reactforexsimplesignals/static/media/header.bafc506f.jpg"
   },
@@ -54,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f004e825dddcfc6a610b96cf1939daf0",
     "url": "/reactforexsimplesignals/static/media/login.f004e825.svg"
+  },
+  {
+    "revision": "b231083fd6ed23326c876c1b268485f0",
+    "url": "/reactforexsimplesignals/static/media/logout.b231083f.svg"
   },
   {
     "revision": "ff7b24789abd1e2f83874f217a4f5f39",
