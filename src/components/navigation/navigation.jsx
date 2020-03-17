@@ -14,6 +14,17 @@ const Navigation = ({currentUser}) => (
 					<FontAwesomeIcon icon={faAngleDoubleRight} className='navigation__arrow-icon' />
 				</div>
 			</li>
+			{
+				currentUser ?
+					<li className='navigation__profile'>
+						<Link className='navigation__link' to='/'>
+							<FontAwesomeIcon icon={faHome} className='navigation__link-icon' />
+							<span className='navigation__link-text'>Home</span>
+						</Link>
+					</li>
+					:
+					null
+			}
 			<li className='navigation__item'>
 				<Link className='navigation__link' to='/'>
 					<FontAwesomeIcon icon={faHome} className='navigation__link-icon' />

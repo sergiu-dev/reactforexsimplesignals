@@ -250,6 +250,11 @@ hr {
   bottom: -7px;
 }
 
+.error {
+  color: #FB494D;
+  margin: 1rem 0;
+}
+
 @media only screen and (max-width: 600px) {
   main {
     margin-left: 0;
