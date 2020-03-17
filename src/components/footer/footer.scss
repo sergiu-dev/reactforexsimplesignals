@@ -57,9 +57,8 @@
   }
   .copyright {
 	background-color: $dark;
-	display: flex;
 	font-size: 14px;
-	padding: 20px 10px;
+	padding: 10px;
 	margin: 0;
 	& p {
 	  color: $green;
@@ -71,9 +70,6 @@
   .footer {
 	margin-left: 0;
 	margin-bottom: 5rem;
-	.copyright {
-	  flex-direction: column;
-	}
   }
 }
 
@@ -91,16 +87,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .copyright {
-	justify-content: space-between;
-	&__icons {
-	  text-align: right;
-	}
-  }
-}
-
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 901px) {
   .footer hr {
 	display: none;
   }
